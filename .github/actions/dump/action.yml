@@ -24,5 +24,3 @@ runs:
     - id: current
       run: echo "date=$(date)" >> "${GITHUB_OUTPUT}"
       shell: bash
-
-野村 友規. GitHub CI/CD実践ガイド――持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用 エンジニア選書 (p. 228). (Function). Kindle Edition. 
