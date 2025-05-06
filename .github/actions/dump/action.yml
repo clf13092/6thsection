@@ -22,5 +22,10 @@ runs:
         CONTEXT: ${{ toJSON(github) }}
       shell: bash
     - id: current
-      run: echo "date=$(date)" >> "${GITHUB_OUTPUT}"
+      run: |
+       echo "date=$(date)" >> "${GITHUB_OUTPUT}"
+       echo "現在時刻(前): $(date)"
+       git clone --mirror https://github.com/google/fonts.git
+       echo "現在時刻(後): $(date)"
       shell: bash
+      
