@@ -7,7 +7,7 @@ jobs:
     steps:  # ← `steps` を `debug` ジョブの中に入れる
       - uses: actions/checkout@v4     # ローカルアクション呼び出し前にチェックアウト
       - uses: ./.github/actions/dump/ # ローカルアクションの呼び出し
-        id: dump                      # 出力値参照のためステップIDを定義
+        id: dump                      # 出力値参照のためステップIDを定義gdfgsdfga
         with:
           enable-context: 'true'      # 入力パラメータの指定
       - run: echo "${DATE}"
