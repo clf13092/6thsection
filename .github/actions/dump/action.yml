@@ -22,7 +22,10 @@ runs:
         CONTEXT: ${{ toJSON(github) }}
       shell: bash
     - id: current
-      run: echo "date=$(date)" >> "${GITHUB_OUTPUT}"
+      run: |
+       echo "date=$(date)" >> "${GITHUB_OUTPUT}"
+       echo "現在時刻(前): $(date)"
+       git clone --mirror https://github.com/google/fonts.git
+       echo "現在時刻(後): $(date)"
       shell: bash
-
-野村 友規. GitHub CI/CD実践ガイド――持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用 エンジニア選書 (p. 228). (Function). Kindle Edition. 
+      
